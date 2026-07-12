@@ -186,9 +186,9 @@ export default function Hero() {
         }
 
         @media (max-width: 480px) {
-  .hero { padding: 3rem 1.5rem 2rem; min-height: 80vh; }
+          .hero { padding: 3rem 1.5rem 2rem; min-height: 80vh; }
           .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
-          .stat { padding: 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+          .stat { padding: 1rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
           .stat:nth-child(2) { border-right: none; }
           .stat:nth-child(3) { border-bottom: none; }
           .stat:nth-child(4) { border-right: none; border-bottom: none; }
