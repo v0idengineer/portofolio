@@ -39,11 +39,11 @@ export default function Hero() {
 
       <style jsx>{`
         .hero {
-          min-height: 100vh;
+          min-height: auto;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          padding: 4rem 2.5rem 0;
+          padding: 3rem 2.5rem 0;
           position: relative;
           overflow: hidden;
         }
@@ -68,7 +68,7 @@ export default function Hero() {
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--accent);
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
           display: flex;
           align-items: center;
           gap: 0.75rem;
@@ -84,10 +84,10 @@ export default function Hero() {
         .hero-name {
           font-family: var(--font-display);
           font-weight: 800;
-          font-size: clamp(2.75rem, 12vw, 6.5rem);
+          font-size: clamp(2.25rem, 8vw, 5rem);
           line-height: 0.95;
           letter-spacing: -0.03em;
-          margin-bottom: 2rem;
+          margin-bottom: 1.25rem;
         }
         .outline {
           -webkit-text-stroke: 1px var(--text);
@@ -97,7 +97,7 @@ export default function Hero() {
           display: flex;
           flex-wrap: wrap;
           gap: 0.5rem;
-          margin-bottom: 2rem;
+          margin-bottom: 1.25rem;
         }
         .role-tag {
           background: var(--bg3);
@@ -118,14 +118,14 @@ export default function Hero() {
           color: var(--muted);
           font-size: 13px;
           line-height: 1.7;
-          margin-bottom: 2.5rem;
+          margin-bottom: 1.5rem;
         }
         .hero-actions {
           display: flex;
           gap: 0.75rem;
           align-items: center;
           flex-wrap: wrap;
-          margin-bottom: 2rem;
+          margin-bottom: 1.25rem;
         }
         .btn-primary {
           background: var(--accent);
@@ -161,7 +161,6 @@ export default function Hero() {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           padding: 1.25rem 0;
-          margin-top: auto;
         }
         .stat {
           padding: 0 1rem;
@@ -185,8 +184,8 @@ export default function Hero() {
         }
 
         @media (max-width: 480px) {
-          .hero { padding: 3rem 1.5rem 2rem; min-height: 100vh; }
-          .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0; margin-top: 2rem; }
+          .hero { padding: 2.5rem 1.5rem 0; }
+          .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0; margin-top: 1.5rem; }
           .stat { padding: 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
           .stat:nth-child(2) { border-right: none; }
           .stat:nth-child(3) { border-bottom: none; }
