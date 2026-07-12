@@ -41,3 +41,50 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 11, 0.92);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  gap: 16px;
+}
+nav.navbar .logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #f0ede8;
+  flex-shrink: 0;
+}
+nav.navbar .logo span { color: #e8c96a; }
+nav.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav.navbar .nav-links a {
+  color: #888880;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+nav.navbar .nav-cta {
+  background: #e8c96a;
+  color: #0a0a0b;
+  padding: 8px 20px;
+  font-size: 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  nav.navbar { padding: 16px 20px !important; }
+  nav.navbar .nav-links { display: none; }
+}
