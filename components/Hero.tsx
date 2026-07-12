@@ -46,7 +46,6 @@ export default function Hero() {
           padding: 13rem 2.5rem 0;
           position: relative;
           overflow: hidden;
-          gap: 1.5rem;
         }
         .hero-deco {
           position: absolute;
