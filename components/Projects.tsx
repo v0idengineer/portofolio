@@ -49,7 +49,7 @@ export default function Projects() {
     <section id="work" className="section">
       <div className="section-header">
         <span className="section-num">// 03</span>
-        <h2 className="section-title">Selected Work</h2>
+        <h2 className="section-title">Another Projects</h2>
         <a
           href={`https://github.com/${GITHUB_USERNAME}`}
           target="_blank"
