@@ -45,7 +45,7 @@ export default function Hero() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 4rem 2.5rem 3rem;
+          padding: 4rem 1.25rem 3rem;
           position: relative;
           overflow: hidden;
         }
@@ -66,25 +66,27 @@ export default function Hero() {
           pointer-events: none;
         }
         .hero-eyebrow {
-          font-size: 11px;
-          letter-spacing: 0.18em;
+          font-size: 10px;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--accent);
           margin-bottom: 1.5rem;
           display: flex;
           align-items: center;
           gap: 0.75rem;
+          flex-wrap: wrap;
         }
         .hero-eyebrow::before {
           content: '';
           display: inline-block;
-          width: 32px; height: 1px;
+          width: 24px; height: 1px;
           background: var(--accent);
+          flex-shrink: 0;
         }
         .hero-name {
           font-family: var(--font-display);
           font-weight: 800;
-          font-size: clamp(3rem, 8vw, 6.5rem);
+          font-size: clamp(2.75rem, 12vw, 6.5rem);
           line-height: 0.95;
           letter-spacing: -0.03em;
           margin-bottom: 2rem;
@@ -120,30 +122,37 @@ export default function Hero() {
           line-height: 1.7;
           margin-bottom: 2.5rem;
         }
-        .hero-actions { display: flex; gap: 1rem; align-items: center; }
+        .hero-actions {
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+          flex-wrap: wrap;
+        }
         .btn-primary {
           background: var(--accent);
           color: #0a0a0b;
-          padding: 0.75rem 2rem;
+          padding: 0.75rem 1.5rem;
           font-family: var(--font-mono);
           font-size: 12px;
           letter-spacing: 0.08em;
           border-radius: 3px;
           text-decoration: none;
           transition: opacity 0.2s;
+          white-space: nowrap;
         }
         .btn-primary:hover { opacity: 0.85; }
         .btn-ghost {
           background: transparent;
           color: var(--muted);
           border: 1px solid var(--border);
-          padding: 0.75rem 2rem;
+          padding: 0.75rem 1.5rem;
           font-family: var(--font-mono);
           font-size: 12px;
           letter-spacing: 0.08em;
           border-radius: 3px;
           text-decoration: none;
           transition: all 0.2s;
+          white-space: nowrap;
         }
         .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
 
@@ -151,12 +160,12 @@ export default function Hero() {
         .stats-bar {
           border-top: 1px solid var(--border);
           border-bottom: 1px solid var(--border);
-          display: flex;
-          padding: 1.5rem 2.5rem;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          padding: 1.25rem;
         }
         .stat {
-          flex: 1;
-          padding: 0 2rem;
+          padding: 0 1rem;
           border-right: 1px solid var(--border);
         }
         .stat:first-child { padding-left: 0; }
@@ -164,16 +173,25 @@ export default function Hero() {
         .stat-num {
           font-family: var(--font-display);
           font-weight: 700;
-          font-size: 2rem;
+          font-size: clamp(1.25rem, 4vw, 2rem);
           color: var(--text);
           line-height: 1;
           margin-bottom: 0.25rem;
         }
         .stat-label {
-          font-size: 11px;
-          letter-spacing: 0.08em;
+          font-size: 10px;
+          letter-spacing: 0.06em;
           text-transform: uppercase;
           color: var(--muted);
+        }
+
+        @media (max-width: 480px) {
+          .hero { padding: 3rem 1.25rem 2rem; min-height: 80vh; }
+          .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
+          .stat { padding: 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+          .stat:nth-child(2) { border-right: none; }
+          .stat:nth-child(3) { border-bottom: none; }
+          .stat:nth-child(4) { border-right: none; border-bottom: none; }
         }
       `}</style>
     </>
