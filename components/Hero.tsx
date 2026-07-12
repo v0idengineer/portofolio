@@ -51,7 +51,7 @@ export default function Hero() {
           justify-content: center;
           padding: 4rem 1.25rem 8rem;
           position: relative;
-          overflow: hidden;
+          overflow: visible;
         }
         .hero-deco {
           position: absolute;
