@@ -46,6 +46,7 @@ export default function Hero() {
           padding: 13rem 2.5rem 0;
           position: relative;
           overflow: hidden;
+          gap: 1.5rem;
         }
         .hero-deco {
           position: absolute;
@@ -167,7 +168,6 @@ export default function Hero() {
           padding: 0 1rem;
           border-right: 1px solid var(--border);
         }
-        .stat:first-child { padding-left: 0; }
         .stat:last-child { border-right: none; }
         .stat-num {
           font-family: var(--font-display);
