@@ -42,7 +42,7 @@ export default function Hero() {
           min-height: 100vh;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start
+          justify-content: space-between;
           padding: 4rem 2.5rem 3rem;
           position: relative;
           overflow: hidden;
@@ -161,7 +161,7 @@ export default function Hero() {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           padding: 1.25rem 0;
-          margin-top: 2rem;
+          margin-top: auto;
         }
         .stat {
           padding: 0 1rem;
