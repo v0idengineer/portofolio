@@ -3,32 +3,30 @@ import { siteConfig, stats } from "@/data/projects";
 
 export default function Hero() {
   return (
-    <>
-      <section className="hero">
-        <div className="hero-deco" />
-        <div className="hero-deco2" />
-        <p className="hero-eyebrow">
-          {siteConfig.available ? "open to work /available for freelance" : "currently unavailable"}
-        </p>
-        <h1 className="hero-name">
-          {siteConfig.name.split(" ")[0]}<br />
-          <span className="outline">{siteConfig.name.split(" ").slice(1).join(" ")}</span>
-        </h1>
-        <div className="hero-roles">
-          <span className="role-tag active">Fullstack Dev</span>
-          <span className="role-tag active">Creative</span>
-          <span className="role-tag active">Data Science</span>
-          <span className="role-tag">UI/UX</span>
-        </div>
-        <p className="hero-desc">
-          Merancang dan membangun pengalaman digital — dari baris kode pertama sampai frame terakhir.
-          Based di {siteConfig.location}, open untuk kolaborasi global.
-        </p>
-        <div className="hero-actions">
-          <a href="#work" className="btn-primary">Lihat karya →</a>
-          <a href="#contact" className="btn-ghost">Hubungi saya</a>
-        </div>
-      </section>
+    <section className="hero">
+      <div className="hero-deco" />
+      <div className="hero-deco2" />
+      <p className="hero-eyebrow">
+        {siteConfig.available ? "open to work /available for freelance" : "currently unavailable"}
+      </p>
+      <h1 className="hero-name">
+        {siteConfig.name.split(" ")[0]}<br />
+        <span className="outline">{siteConfig.name.split(" ").slice(1).join(" ")}</span>
+      </h1>
+      <div className="hero-roles">
+        <span className="role-tag active">Fullstack Dev</span>
+        <span className="role-tag active">Creative</span>
+        <span className="role-tag active">Data Science</span>
+        <span className="role-tag">UI/UX</span>
+      </div>
+      <p className="hero-desc">
+        Merancang dan membangun pengalaman digital — dari baris kode pertama sampai frame terakhir.
+        Based di {siteConfig.location}, open untuk kolaborasi global.
+      </p>
+      <div className="hero-actions">
+        <a href="#work" className="btn-primary">Lihat karya →</a>
+        <a href="#contact" className="btn-ghost">Hubungi saya</a>
+      </div>
 
       <div className="stats-bar">
         {stats.map((s) => (
@@ -44,8 +42,8 @@ export default function Hero() {
           min-height: 100vh;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          padding: 4rem 2.5rem 3rem;
+          justify-content: flex-start;
+          padding: 6rem 2.5rem 3rem;
           position: relative;
           overflow: hidden;
         }
@@ -127,6 +125,7 @@ export default function Hero() {
           gap: 0.75rem;
           align-items: center;
           flex-wrap: wrap;
+          margin-bottom: 4rem;
         }
         .btn-primary {
           background: var(--accent);
@@ -156,23 +155,19 @@ export default function Hero() {
         }
         .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
 
-        @keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(6px); }
-        }
-
         /* Stats */
         .stats-bar {
           border-top: 1px solid var(--border);
-          border-bottom: 1px solid var(--border);
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          padding: 1.25rem;
+          padding: 1.25rem 0;
+          margin-top: auto;
         }
         .stat {
           padding: 0 1rem;
           border-right: 1px solid var(--border);
         }
+        .stat:first-child { padding-left: 0; }
         .stat:last-child { border-right: none; }
         .stat-num {
           font-family: var(--font-display);
@@ -190,15 +185,14 @@ export default function Hero() {
         }
 
         @media (max-width: 480px) {
-          .hero { padding: 3rem 1.5rem 2rem; min-height: 80vh; }
-          .scroll-indicator { display: none; }
-          .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
-          .stat { padding: 1rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+          .hero { padding: 3rem 1.5rem 2rem; min-height: 100vh; }
+          .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0; margin-top: 2rem; }
+          .stat { padding: 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
           .stat:nth-child(2) { border-right: none; }
           .stat:nth-child(3) { border-bottom: none; }
           .stat:nth-child(4) { border-right: none; border-bottom: none; }
         }
       `}</style>
-    </>
+    </section>
   );
 }
