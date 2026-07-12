@@ -139,7 +139,7 @@ export default function CurrentProject() {
           flex: 1;
           max-width: 200px;
         }
-        .preview-body { padding: 1rem 1.5rem 0; }
+        .preview-body { padding: 2rem 2rem 0; }
 
         /* NAV */
         .preview-nav {
@@ -176,48 +176,48 @@ export default function CurrentProject() {
         }
 
         /* HERO */
-        .preview-hero { text-align: center; padding: 0 1rem 1rem; }
+        .preview-hero { text-align: center; padding: 1.5rem 1rem 2rem; }
         .badge-pill {
           display: inline-block;
           border: 1px solid #c4622d40;
           color: #c4622d;
-          font-size: 9px;
+          font-size: 10px;
           letter-spacing: 0.1em;
-          padding: 0.2rem 0.75rem;
+          padding: 0.3rem 0.9rem;
           border-radius: 20px;
-          margin-bottom: 0.5rem;
+          margin-bottom: 1rem;
           background: #c4622d10;
         }
-        .hero-h1 { font-family: 'Georgia', serif; font-size: 20px; color: #2d1a0e; line-height: 1.1; font-weight: 700; }
+        .hero-h1 { font-family: 'Georgia', serif; font-size: 28px; color: #2d1a0e; line-height: 1.15; font-weight: 700; }
         .hero-h1.orange { color: #c4622d; }
-        .hero-desc { font-size: 10px; color: #888; margin: 0.5rem 0 0.75rem; line-height: 1.5; }
-        .hero-btns { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
-        .btn-main { background: #c4622d; color: white; padding: 0.4rem 1rem; border-radius: 6px; font-size: 10px; font-weight: 600; }
-        .btn-sec { border: 1px solid #2d1a0e40; color: #2d1a0e; padding: 0.4rem 1rem; border-radius: 6px; font-size: 10px; }
+        .hero-desc { font-size: 12px; color: #888; margin: 0.75rem 0 1.25rem; line-height: 1.6; }
+        .hero-btns { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+        .btn-main { background: #c4622d; color: white; padding: 0.55rem 1.25rem; border-radius: 6px; font-size: 11px; font-weight: 600; }
+        .btn-sec { border: 1px solid #2d1a0e40; color: #2d1a0e; padding: 0.55rem 1.25rem; border-radius: 6px; font-size: 11px; }
 
         /* APP WINDOW */
-        .app-preview { padding: 0 1.5rem; overflow: hidden; }
-        .app-window { background: #2d2017; border-radius: 8px 8px 0 0; overflow: hidden; }
+        .app-preview { padding: 0 2rem 2rem; overflow: hidden; }
+        .app-window { background: #2d2017; border-radius: 8px; overflow: hidden; }
         .app-nav {
-          padding: 0.5rem 0.75rem;
+          padding: 0.75rem 1rem;
           display: flex;
           align-items: center;
           gap: 0.5rem;
           border-bottom: 1px solid rgba(255,255,255,0.08);
         }
-        .app-name { font-size: 10px; color: white; font-weight: 700; letter-spacing: 0.08em; }
+        .app-name { font-size: 11px; color: white; font-weight: 700; letter-spacing: 0.08em; }
         .app-nav-pills { margin-left: auto; display: flex; gap: 0.4rem; }
         .pill { width: 28px; height: 14px; background: rgba(255,255,255,0.1); border-radius: 3px; }
         .stats-row {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          padding: 0.75rem;
-          gap: 0.5rem;
+          padding: 1.25rem;
+          gap: 0.75rem;
         }
-        .stat-card { background: white; border-radius: 4px; padding: 0.5rem; text-align: center; min-width: 0; }
-        .stat-val { font-size: 9px; font-weight: 700; color: #2d1a0e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .stat-card { background: white; border-radius: 4px; padding: 0.9rem 0.6rem; text-align: center; min-width: 0; }
+        .stat-val { font-size: 11px; font-weight: 700; color: #2d1a0e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .stat-val.orange { color: #c4622d; }
-        .stat-lbl { font-size: 7px; color: #aaa; margin-top: 2px; }
+        .stat-lbl { font-size: 8px; color: #aaa; margin-top: 3px; }
 
         /* CARD INFO */
         .card-info {
