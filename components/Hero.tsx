@@ -28,10 +28,10 @@ export default function Hero() {
           <a href="#work" className="btn-primary">Lihat karya →</a>
           <a href="#contact" className="btn-ghost">Hubungi saya</a>
         </div>
-        <div className="scroll-indicator">
+        <a href="#about" className="scroll-indicator">
           <span>scroll</span>
           <div className="scroll-arrow">↓</div>
-        </div>
+        </a>
       </section>
 
       <div className="stats-bar">
@@ -45,11 +45,11 @@ export default function Hero() {
 
       <style jsx>{`
         .hero {
-          min-height: 88vh;
+          min-height: 100vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 4rem 1.25rem 3rem;
+          padding: 4rem 1.25rem 6rem;
           position: relative;
           overflow: hidden;
         }
@@ -174,8 +174,11 @@ export default function Hero() {
           font-size: 10px;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          pointer-events: none;
+          text-decoration: none;
+          cursor: pointer;
+          transition: opacity 0.2s;
         }
+        .scroll-indicator:hover { opacity: 0.6; }
         .scroll-arrow {
           animation: bounce 1.5s infinite;
           font-size: 1rem;
@@ -215,7 +218,7 @@ export default function Hero() {
         }
 
         @media (max-width: 480px) {
-          .hero { padding: 3rem 1.5rem 2rem; min-height: 80vh; }
+          .hero { padding: 3rem 1.5rem 5rem; min-height: 100vh; }
           .scroll-indicator { display: none; }
           .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
           .stat { padding: 1rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
