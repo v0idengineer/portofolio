@@ -99,8 +99,3 @@ nav.navbar .nav-cta:hover { opacity: 0.85; }
 main {
   overflow: visible;
 }
-
-section.hero {
-  padding: 4rem 2.5rem 3rem !important;
-  justify-content: center !important;
-}
