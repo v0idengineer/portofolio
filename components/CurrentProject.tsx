@@ -29,10 +29,8 @@ export default function CurrentProject() {
             </div>
             <div className="preview-hero">
               <div className="badge-pill">✦ GRATIS UNTUK 1 OUTLET</div>
-              <div className="hero-text">
-                <div className="hero-h1">Kasir digital</div>
-                <div className="hero-h1 orange">simpel &amp; murah</div>
-              </div>
+              <div className="hero-h1">Kasir digital</div>
+              <div className="hero-h1 orange">simpel &amp; murah</div>
               <p className="hero-desc">Kelola pesanan, stok, dan laporan cafe atau resto kamu dalam satu aplikasi.</p>
               <div className="hero-btns">
                 <span className="btn-main">Mulai Gratis Sekarang →</span>
@@ -72,18 +70,18 @@ export default function CurrentProject() {
         </div>
 
         <div className="card-info">
-          <div className="card-left">
-            <div className="live-badge"><span className="live-dot" />live & active</div>
-            <div className="card-title">Kaseazy</div>
-            <div className="card-desc">Aplikasi kasir digital untuk UMKM — kelola pesanan, stok, dan laporan cafe atau resto dalam satu platform.</div>
+          <div className="live-badge"><span className="live-dot" />live &amp; active</div>
+          <div className="card-title">Kaseazy</div>
+          <div className="card-desc">Aplikasi kasir digital untuk UMKM — kelola pesanan, stok, dan laporan cafe atau resto dalam satu platform.</div>
+          <div className="card-bottom">
             <div className="tags">
               <span className="tag">Next.js</span>
               <span className="tag">PostgreSQL</span>
               <span className="tag">TypeScript</span>
               <span className="tag">Vercel</span>
             </div>
+            <div className="visit-btn">kaseazy.com ↗</div>
           </div>
-          <div className="visit-btn">kaseazy.com ↗</div>
         </div>
       </a>
 
@@ -118,10 +116,7 @@ export default function CurrentProject() {
         .project-card:hover { border-color: rgba(255,255,255,0.15); }
 
         /* BROWSER PREVIEW */
-        .preview {
-          background: #f5f0e8;
-          border-bottom: 1px solid var(--border);
-        }
+        .preview { background: #f5f0e8; border-bottom: 1px solid var(--border); }
         .browser-bar {
           background: #e8e3db;
           padding: 0.5rem 1rem;
@@ -130,10 +125,7 @@ export default function CurrentProject() {
           gap: 0.75rem;
         }
         .dots { display: flex; gap: 5px; }
-        .dot {
-          width: 8px; height: 8px;
-          border-radius: 50%;
-        }
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
         .dot.red { background: #ff5f57; }
         .dot.yellow { background: #febc2e; }
         .dot.green { background: #28c840; }
@@ -166,16 +158,12 @@ export default function CurrentProject() {
           justify-content: center;
           font-weight: 800;
           font-size: 14px;
+          flex-shrink: 0;
         }
         .k-logo.small { width: 20px; height: 20px; font-size: 10px; border-radius: 4px; }
-        .k-name {
-          font-weight: 800;
-          font-size: 12px;
-          color: #2d1a0e;
-          letter-spacing: 0.05em;
-        }
+        .k-name { font-weight: 800; font-size: 12px; color: #2d1a0e; letter-spacing: 0.05em; }
         .k-name span { display: block; font-size: 8px; font-weight: 400; color: #888; letter-spacing: 0.1em; }
-        .nav-actions { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; }
+        .nav-actions { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0; }
         .nav-masuk { font-size: 10px; color: #2d1a0e; letter-spacing: 0.05em; }
         .nav-cta {
           background: #c4622d;
@@ -184,7 +172,7 @@ export default function CurrentProject() {
           border-radius: 20px;
           font-size: 10px;
           font-weight: 600;
-          letter-spacing: 0.04em;
+          white-space: nowrap;
         }
 
         /* HERO */
@@ -197,42 +185,19 @@ export default function CurrentProject() {
           letter-spacing: 0.1em;
           padding: 0.2rem 0.75rem;
           border-radius: 20px;
-          margin-bottom: 0.75rem;
+          margin-bottom: 0.5rem;
           background: #c4622d10;
         }
-        .hero-h1 {
-          font-family: 'Georgia', serif;
-          font-size: 22px;
-          color: #2d1a0e;
-          line-height: 1.1;
-          font-weight: 700;
-        }
+        .hero-h1 { font-family: 'Georgia', serif; font-size: 20px; color: #2d1a0e; line-height: 1.1; font-weight: 700; }
         .hero-h1.orange { color: #c4622d; }
         .hero-desc { font-size: 10px; color: #888; margin: 0.5rem 0 0.75rem; line-height: 1.5; }
         .hero-btns { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
-        .btn-main {
-          background: #c4622d;
-          color: white;
-          padding: 0.4rem 1rem;
-          border-radius: 6px;
-          font-size: 10px;
-          font-weight: 600;
-        }
-        .btn-sec {
-          border: 1px solid #2d1a0e40;
-          color: #2d1a0e;
-          padding: 0.4rem 1rem;
-          border-radius: 6px;
-          font-size: 10px;
-        }
+        .btn-main { background: #c4622d; color: white; padding: 0.4rem 1rem; border-radius: 6px; font-size: 10px; font-weight: 600; }
+        .btn-sec { border: 1px solid #2d1a0e40; color: #2d1a0e; padding: 0.4rem 1rem; border-radius: 6px; font-size: 10px; }
 
         /* APP WINDOW */
-        .app-preview { padding: 0 1.5rem; }
-        .app-window {
-          background: #2d2017;
-          border-radius: 8px 8px 0 0;
-          overflow: hidden;
-        }
+        .app-preview { padding: 0 1.5rem; overflow: hidden; }
+        .app-window { background: #2d2017; border-radius: 8px 8px 0 0; overflow: hidden; }
         .app-nav {
           padding: 0.5rem 0.75rem;
           display: flex;
@@ -242,37 +207,22 @@ export default function CurrentProject() {
         }
         .app-name { font-size: 10px; color: white; font-weight: 700; letter-spacing: 0.08em; }
         .app-nav-pills { margin-left: auto; display: flex; gap: 0.4rem; }
-        .pill {
-          width: 28px; height: 14px;
-          background: rgba(255,255,255,0.1);
-          border-radius: 3px;
-        }
+        .pill { width: 28px; height: 14px; background: rgba(255,255,255,0.1); border-radius: 3px; }
         .stats-row {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 1px;
-          background: rgba(255,255,255,0.06);
           padding: 0.75rem;
           gap: 0.5rem;
         }
-        .stat-card {
-          background: white;
-          border-radius: 4px;
-          padding: 0.5rem;
-          text-align: center;
-        }
-        .stat-val { font-size: 10px; font-weight: 700; color: #2d1a0e; }
+        .stat-card { background: white; border-radius: 4px; padding: 0.5rem; text-align: center; min-width: 0; }
+        .stat-val { font-size: 9px; font-weight: 700; color: #2d1a0e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .stat-val.orange { color: #c4622d; }
-        .stat-lbl { font-size: 8px; color: #aaa; margin-top: 2px; }
+        .stat-lbl { font-size: 7px; color: #aaa; margin-top: 2px; }
 
         /* CARD INFO */
         .card-info {
           background: var(--bg2);
-          padding: 1.75rem;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 1rem;
+          padding: 1.5rem;
         }
         .live-badge {
           display: inline-flex;
@@ -287,12 +237,14 @@ export default function CurrentProject() {
           background: rgba(106,187,232,0.08);
           border: 1px solid rgba(106,187,232,0.15);
           margin-bottom: 0.75rem;
+          white-space: nowrap;
         }
         .live-dot {
           width: 6px; height: 6px;
           border-radius: 50%;
           background: var(--accent2);
           animation: pulse 1.5s infinite;
+          flex-shrink: 0;
         }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
         .card-title {
@@ -302,7 +254,14 @@ export default function CurrentProject() {
           color: var(--text);
           margin-bottom: 0.35rem;
         }
-        .card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; max-width: 480px; }
+        .card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+        .card-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
         .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
         .tag {
           font-size: 10px;
@@ -324,6 +283,14 @@ export default function CurrentProject() {
           flex-shrink: 0;
         }
         .project-card:hover .visit-btn { opacity: 0.85; }
+
+        @media (max-width: 480px) {
+          .section { padding: 3rem 1.25rem; }
+          .preview-body { padding: 0.75rem 1rem 0; }
+          .app-preview { padding: 0 1rem; }
+          .card-info { padding: 1.25rem; }
+          .visit-btn { width: 100%; text-align: center; }
+        }
       `}</style>
     </section>
   );
