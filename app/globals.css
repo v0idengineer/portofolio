@@ -41,7 +41,7 @@ nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 40px !important;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;

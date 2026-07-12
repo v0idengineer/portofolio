@@ -49,7 +49,7 @@ export default function Hero() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 4rem 1.25rem 3rem;
+          padding: 4rem 2.5rem 3rem;
           position: relative;
           overflow: hidden;
         }
