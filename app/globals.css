@@ -41,3 +41,7 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+section {
+  overflow: visible !important;
+}
