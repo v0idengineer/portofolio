@@ -42,8 +42,8 @@ export default function Hero() {
           min-height: 100vh;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          padding: 6rem 2.5rem 3rem;
+          justify-content: space-between;
+          padding: 4rem 2.5rem 3rem;
           position: relative;
           overflow: hidden;
         }
@@ -125,7 +125,7 @@ export default function Hero() {
           gap: 0.75rem;
           align-items: center;
           flex-wrap: wrap;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
         }
         .btn-primary {
           background: var(--accent);
