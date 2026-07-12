@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import { siteConfig } from "@/data/projects";
 import CurrentProject from "@/components/CurrentProject";
+import RevealSection from "@/components/RevealSection";
 
 export default function Home() {
   return (
@@ -13,10 +14,18 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Skills />
-        <CurrentProject />
-        <Projects />
-        <Contact />
+        <RevealSection>
+          <Skills />
+        </RevealSection>
+        <RevealSection delay={0.1}>
+          <CurrentProject />
+        </RevealSection>
+        <RevealSection delay={0.1}>
+          <Projects />
+        </RevealSection>
+        <RevealSection delay={0.1}>
+          <Contact />
+        </RevealSection>
       </main>
       <footer>
         <span>© 2025 {siteConfig.name} — {siteConfig.location}</span>
