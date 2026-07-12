@@ -28,6 +28,10 @@ export default function Hero() {
           <a href="#work" className="btn-primary">Lihat karya →</a>
           <a href="#contact" className="btn-ghost">Hubungi saya</a>
         </div>
+        <div className="scroll-indicator">
+          <span>scroll</span>
+          <div className="scroll-arrow">↓</div>
+        </div>
       </section>
 
       <div className="stats-bar">
@@ -156,6 +160,32 @@ export default function Hero() {
         }
         .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
 
+        /* Scroll indicator */
+        .scroll-indicator {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          color: var(--muted);
+          font-size: 10px;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          pointer-events: none;
+        }
+        .scroll-arrow {
+          animation: bounce 1.5s infinite;
+          font-size: 1rem;
+          color: var(--accent);
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(6px); }
+        }
+
         /* Stats */
         .stats-bar {
           border-top: 1px solid var(--border);
@@ -186,6 +216,7 @@ export default function Hero() {
 
         @media (max-width: 480px) {
           .hero { padding: 3rem 1.5rem 2rem; min-height: 80vh; }
+          .scroll-indicator { display: none; }
           .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
           .stat { padding: 1rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
           .stat:nth-child(2) { border-right: none; }
