@@ -9,8 +9,8 @@ export default function Navbar() {
         <span>{siteConfig.initials.slice(-1)}</span>
       </div>
       <ul className="nav-links">
-        <li><a href="#work">work</a></li>
         <li><a href="#about">about</a></li>
+        <li><a href="#work">work</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
       <a href="mailto:riyadi256789@gmail.com" className="nav-cta">
