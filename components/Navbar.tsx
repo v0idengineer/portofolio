@@ -22,7 +22,7 @@ export default function Navbar() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1rem 1.25rem;
+          padding: 1.25rem 2.5rem;
           border-bottom: 1px solid var(--border);
           position: sticky;
           top: 0;
@@ -60,9 +60,9 @@ export default function Navbar() {
           background: var(--accent);
           color: #0a0a0b;
           border: none;
-          padding: 0.4rem 0.85rem;
+          padding: 0.5rem 1.25rem;
           font-family: var(--font-mono);
-          font-size: 11px;
+          font-size: 12px;
           font-weight: 500;
           letter-spacing: 0.05em;
           cursor: pointer;
@@ -75,7 +75,7 @@ export default function Navbar() {
         .nav-cta:hover { opacity: 0.85; }
 
         @media (max-width: 480px) {
-          .navbar { padding: 1rem; }
+          .navbar { padding: 1rem 1.25rem; }
           .nav-links { display: none; }
           .nav-cta { padding: 0.4rem 0.75rem; }
         }
