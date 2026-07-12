@@ -28,11 +28,12 @@ export default function Hero() {
           <a href="#work" className="btn-primary">Lihat karya →</a>
           <a href="#contact" className="btn-ghost">Hubungi saya</a>
         </div>
-        <a href="#about" className="scroll-indicator">
-          <span>scroll</span>
-          <div className="scroll-arrow">↓</div>
-        </a>
       </section>
+
+      <a href="#about" className="scroll-indicator">
+        <span>scroll</span>
+        <div className="scroll-arrow">↓</div>
+      </a>
 
       <div className="stats-bar">
         {stats.map((s) => (
@@ -49,7 +50,7 @@ export default function Hero() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 4rem 1.25rem 8rem;
+          padding: 4rem 1.25rem 3rem;
           position: relative;
           overflow: hidden;
         }
@@ -162,13 +163,10 @@ export default function Hero() {
 
         /* Scroll indicator */
         .scroll-indicator {
-          position: absolute;
-          bottom: 2rem;
-          left: 50%;
-          transform: translateX(-50%);
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding: 1.5rem 0;
           gap: 0.5rem;
           color: var(--muted);
           font-size: 10px;
@@ -177,6 +175,7 @@ export default function Hero() {
           text-decoration: none;
           cursor: pointer;
           transition: opacity 0.2s;
+          border-bottom: none;
         }
         .scroll-indicator:hover { opacity: 0.6; }
         .scroll-arrow {
@@ -218,7 +217,7 @@ export default function Hero() {
         }
 
         @media (max-width: 480px) {
-          .hero { padding: 3rem 1.5rem 5rem; min-height: 100vh; }
+          .hero { padding: 3rem 1.5rem 2rem; min-height: 100vh; }
           .scroll-indicator { display: none; }
           .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
           .stat { padding: 1rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
