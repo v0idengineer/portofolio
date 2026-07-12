@@ -13,7 +13,7 @@ export default function Navbar() {
         <li><a href="#about">about</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
-      <a href={`mailto:${siteConfig.email}`} className="nav-cta">
+      <a href="mailto:riyadi256789@gmail.com" className="nav-cta">
         hire me ↗
       </a>
 

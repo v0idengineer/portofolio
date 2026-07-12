@@ -8,14 +8,14 @@ export interface Skill {
 
 export const siteConfig = {
   name: "Saiful Faris Riyadi",         
-  initials: "SR",            // ← ganti
+  initials: "SR",            
   tagline: "Fullstack Dev & Creative",
   location: "Bandung, ID",
   available: true,
-  email: "riyadi256789@gmail.com",   // ← ganti
-  linkedin: "Faris Riyadi",      // ← ganti
-  instagram: "@xrsdi",    // ← ganti
-  vercelUrl: "farisriyadiporto.vercel.app", // ← ganti
+  email: "riyadi256789@gmail.com",   
+  linkedin: "Faris Riyadi",      
+  instagram: "@xrsdi",    
+  vercelUrl: "farisriyadiporto.vercel.app", 
 };
 
 export const stats = [
@@ -66,7 +66,7 @@ export const skills: Skill[] = [
     icon: "◈",
     category: "Data Science",
     name: "Sentiment Analysis",
-    desc: "Setup kerja yang efisien dari solo sampai tim besar.",
+    desc: "Emosi, opini, dan polaritas.",
     tags: ["SQL", "Excel", "NumPy", "Pandas", "Scikit-learn", "TensorFlow", "Keras", "PyTorch"],
   },
 ];
