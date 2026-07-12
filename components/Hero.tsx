@@ -43,7 +43,7 @@ export default function Hero() {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          padding: 3rem 2.5rem 0;
+          padding: 5rem 2.5rem 0;
           position: relative;
           overflow: hidden;
         }
@@ -160,7 +160,8 @@ export default function Hero() {
           border-top: 1px solid var(--border);
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          padding: 1.25rem 0;
+          padding: 1.75rem 0;
+          margin-top: 2.5rem;
         }
         .stat {
           padding: 0 1rem;
