@@ -4,11 +4,11 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import { siteConfig } from "@/data/projects";
 import CurrentProject from "@/components/CurrentProject";
 import LiveProjects from "@/components/LiveProjects";
 import RevealSection from "@/components/RevealSection";
 import OverlapPanel from "@/components/OverlapPanel";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -45,22 +45,7 @@ export default function Home() {
         </OverlapPanel>
       </main>
       <OverlapPanel z={7} bg="var(--bg)">
-        <footer>
-          <span>© 2025 {siteConfig.name} — {siteConfig.location}</span>
-          <span className="footer-tag">[ designed with intention ]</span>
-          <style jsx>{`
-            footer {
-              padding: 1.5rem 2.5rem;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              color: var(--muted);
-              font-size: 11px;
-              letter-spacing: 0.06em;
-            }
-            .footer-tag { color: rgba(255,255,255,0.12); }
-          `}</style>
-        </footer>
+        <Footer />
       </OverlapPanel>
     </>
   );
