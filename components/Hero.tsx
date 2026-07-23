@@ -1,31 +1,61 @@
 "use client";
+import { useEffect, useState } from "react";
 import { siteConfig, stats } from "@/data/projects";
 
+const PHOTO_SRC = "/profile.jpg";
+
 export default function Hero() {
+  const [hasPhoto, setHasPhoto] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.onload = () => setHasPhoto(true);
+    img.src = PHOTO_SRC;
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-deco" />
       <div className="hero-deco2" />
-      <p className="hero-eyebrow">
-        {siteConfig.available ? "open to work /available for freelance" : "currently unavailable"}
-      </p>
-      <h1 className="hero-name">
-        {siteConfig.name.split(" ")[0]}<br />
-        <span className="outline">{siteConfig.name.split(" ").slice(1).join(" ")}</span>
-      </h1>
-      <div className="hero-roles">
-        <span className="role-tag active">Fullstack Dev</span>
-        <span className="role-tag active">Creative</span>
-        <span className="role-tag active">Data Science</span>
-        <span className="role-tag">UI/UX</span>
-      </div>
-      <p className="hero-desc">
-        Merancang dan membangun pengalaman digital — dari baris kode pertama sampai frame terakhir.
-        Based di {siteConfig.location}, open untuk kolaborasi global.
-      </p>
-      <div className="hero-actions">
-        <a href="#work" className="btn-primary">Lihat karya →</a>
-        <a href="#contact" className="btn-ghost">Hubungi saya</a>
+
+      <div className="hero-top">
+        <div className="hero-content">
+          <p className="hero-eyebrow">
+            {siteConfig.available ? "open to work /available for freelance" : "currently unavailable"}
+          </p>
+          <h1 className="hero-name">
+            {siteConfig.name.split(" ")[0]}<br />
+            <span className="outline">{siteConfig.name.split(" ").slice(1).join(" ")}</span>
+          </h1>
+          <div className="hero-roles">
+            <span className="role-tag active">Fullstack Dev</span>
+            <span className="role-tag active">Creative</span>
+            <span className="role-tag active">Data Science</span>
+            <span className="role-tag">UI/UX</span>
+          </div>
+          <p className="hero-desc">
+            Merancang dan membangun pengalaman digital — dari baris kode pertama sampai frame terakhir.
+            Based di {siteConfig.location}, open untuk kolaborasi global.
+          </p>
+          <div className="hero-actions">
+            <a href="#work" className="btn-primary">Lihat karya →</a>
+            <a href="#contact" className="btn-ghost">Hubungi saya</a>
+          </div>
+        </div>
+
+        <div className="hero-visual-wrap">
+          <div className="hero-visual">
+            {hasPhoto ? (
+              <img src={PHOTO_SRC} alt={siteConfig.name} className="hero-photo" />
+            ) : (
+              <div className="hero-placeholder">
+                <span className="ph-initials">{siteConfig.initials}</span>
+              </div>
+            )}
+          </div>
+          <span className="frame-corner tl" />
+          <span className="frame-corner br" />
+        </div>
       </div>
 
       <div className="stats-bar">
@@ -62,6 +92,61 @@ export default function Hero() {
           border-radius: 50%;
           background: radial-gradient(circle, rgba(106,187,232,0.05) 0%, transparent 70%);
           pointer-events: none;
+        }
+        .hero-top {
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          gap: 3rem;
+          align-items: center;
+        }
+        .hero-visual-wrap {
+          position: relative;
+        }
+        .hero-visual {
+          position: relative;
+          aspect-ratio: 4 / 5;
+          border-radius: 4px;
+          overflow: hidden;
+          border: 1px solid var(--border);
+          background: linear-gradient(160deg, var(--bg3), var(--bg2));
+        }
+        .hero-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .hero-placeholder {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .ph-initials {
+          font-family: var(--font-display);
+          font-weight: 800;
+          font-size: clamp(3rem, 9vw, 4.5rem);
+          letter-spacing: -0.02em;
+          color: rgba(255, 255, 255, 0.06);
+        }
+        .frame-corner {
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          pointer-events: none;
+        }
+        .frame-corner.tl {
+          top: -8px;
+          left: -8px;
+          border-top: 2px solid var(--accent);
+          border-left: 2px solid var(--accent);
+        }
+        .frame-corner.br {
+          bottom: -8px;
+          right: -8px;
+          border-bottom: 2px solid var(--accent2);
+          border-right: 2px solid var(--accent2);
         }
         .hero-eyebrow {
           font-size: 10px;
@@ -181,6 +266,12 @@ export default function Hero() {
           letter-spacing: 0.06em;
           text-transform: uppercase;
           color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+          .hero-top { grid-template-columns: 1fr; gap: 2rem; }
+          .hero-visual-wrap { max-width: 360px; }
+          .hero-visual { aspect-ratio: 16 / 10; }
         }
 
         @media (max-width: 480px) {

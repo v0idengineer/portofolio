@@ -35,67 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* NAVBAR */
-nav.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px !important;
-  border-bottom: 1px solid var(--border);
-  position: sticky !important;
-  top: 0;
-  background: rgba(10, 10, 11, 0.92);
-  backdrop-filter: blur(12px);
-  z-index: 100;
-  gap: 16px;
-}
-nav.navbar .logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 24px !important;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  flex-shrink: 0;
-}
-nav.navbar .logo span { color: var(--accent); }
-nav.navbar .nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  flex-shrink: 0;
-}
-nav.navbar .nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 15px !important;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-nav.navbar .nav-links a:hover { color: var(--text); }
-nav.navbar .nav-cta {
-  background: var(--accent);
-  color: #0a0a0b;
-  padding: 8px 20px;
-  font-family: var(--font-mono);
-  font-size: 15px !important;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  border-radius: 3px;
-  text-decoration: none;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-nav.navbar .nav-cta:hover { opacity: 0.85; }
-
-@media (max-width: 480px) {
-  nav.navbar { padding: 16px 20px; }
-  nav.navbar .nav-links { display: none; }
-  nav.navbar .nav-cta { padding: 6px 12px; }
-}
-
 main {
   overflow: visible;
 }

@@ -7,15 +7,15 @@ export interface Skill {
 }
 
 export const siteConfig = {
-  name: "Saiful Faris Riyadi",         
-  initials: "SR",            
+  name: "Saiful Faris Riyadi",
+  initials: "SR",
   tagline: "Fullstack Dev & Creative",
   location: "Bandung, ID",
   available: true,
-  email: "riyadi256789@gmail.com",   
-  linkedin: "Faris Riyadi",      
-  instagram: "@xrsdi",    
-  vercelUrl: "farisriyadiporto.vercel.app", 
+  email: "riyadi256789@gmail.com",
+  linkedin: "Faris Riyadi",
+  instagram: "@xrsdi",
+  vercelUrl: "farisriyadiporto.vercel.app",
 };
 
 export const stats = [
