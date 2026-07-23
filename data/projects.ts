@@ -6,6 +6,14 @@ export interface Skill {
   tags: string[];
 }
 
+export interface LiveProject {
+  name: string;
+  description: string;
+  url: string;
+  tags: string[];
+  year: string;
+}
+
 export const siteConfig = {
   name: "Saiful Faris Riyadi",
   initials: "SR",
@@ -25,6 +33,31 @@ export const stats = [
   { num: "4", label: "Disciplines" },
 ];
 
+
+// TODO: ganti dengan project yang sudah live beneran — ini masih placeholder.
+export const liveProjects: LiveProject[] = [
+  {
+    name: "Nama Project Satu",
+    description: "Ganti dengan deskripsi singkat project yang sudah live ini ngapain.",
+    url: "#",
+    tags: ["Next.js", "PostgreSQL"],
+    year: "2026",
+  },
+  {
+    name: "Nama Project Dua",
+    description: "Ganti dengan deskripsi singkat project yang sudah live ini ngapain.",
+    url: "#",
+    tags: ["React Native"],
+    year: "2025",
+  },
+  {
+    name: "Nama Project Tiga",
+    description: "Ganti dengan deskripsi singkat project yang sudah live ini ngapain.",
+    url: "#",
+    tags: ["Python", "FastAPI"],
+    year: "2025",
+  },
+];
 
 export const skills: Skill[] = [
   {

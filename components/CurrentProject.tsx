@@ -4,7 +4,7 @@ export default function CurrentProject() {
   return (
     <section id="current" className="section">
       <div className="section-header">
-        <span className="section-num">// 02</span>
+        <span className="section-num">// 03</span>
         <h2 className="section-title">Current Project</h2>
       </div>
 

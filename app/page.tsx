@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import { siteConfig } from "@/data/projects";
 import CurrentProject from "@/components/CurrentProject";
+import LiveProjects from "@/components/LiveProjects";
 import RevealSection from "@/components/RevealSection";
 
 export default function Home() {
@@ -16,6 +17,9 @@ export default function Home() {
         <Hero />
         <RevealSection>
           <Skills />
+        </RevealSection>
+        <RevealSection delay={0.1}>
+          <LiveProjects />
         </RevealSection>
         <RevealSection delay={0.1}>
           <CurrentProject />
