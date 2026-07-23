@@ -17,21 +17,30 @@ export default function LiveProjects() {
             rel="noopener noreferrer"
             className="live-card"
           >
-            <div className="live-top">
-              <span className="live-badge">
-                <span className="live-dot" />
-                live
-              </span>
-              <span className="live-year">{p.year}</span>
+            <div className="live-thumb">
+              {p.image ? (
+                <img src={p.image} alt={p.name} className="live-thumb-img" />
+              ) : (
+                <span className="live-thumb-placeholder">no preview</span>
+              )}
             </div>
-            <div className="live-title">{p.name}</div>
-            <p className="live-desc">{p.description}</p>
-            <div className="live-tags">
-              {p.tags.map((t) => (
-                <span key={t} className="live-tag">{t}</span>
-              ))}
+            <div className="live-body">
+              <div className="live-top">
+                <span className="live-badge">
+                  <span className="live-dot" />
+                  live
+                </span>
+                <span className="live-year">{p.year}</span>
+              </div>
+              <div className="live-title">{p.name}</div>
+              <p className="live-desc">{p.description}</p>
+              <div className="live-tags">
+                {p.tags.map((t) => (
+                  <span key={t} className="live-tag">{t}</span>
+                ))}
+              </div>
+              <div className="live-visit">kunjungi ↗</div>
             </div>
-            <div className="live-visit">kunjungi ↗</div>
           </a>
         ))}
       </div>
@@ -69,7 +78,6 @@ export default function LiveProjects() {
         }
         .live-card {
           background: var(--bg2);
-          padding: 1.5rem;
           display: flex;
           flex-direction: column;
           text-decoration: none;
@@ -77,6 +85,37 @@ export default function LiveProjects() {
           transition: background 0.2s;
         }
         .live-card:hover { background: var(--bg3); }
+        .live-thumb {
+          aspect-ratio: 16 / 10;
+          background: linear-gradient(160deg, var(--bg3), var(--bg2));
+          border-bottom: 1px solid var(--border);
+          overflow: hidden;
+        }
+        .live-thumb-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s;
+        }
+        .live-card:hover .live-thumb-img { transform: scale(1.04); }
+        .live-thumb-placeholder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted);
+        }
+        .live-body {
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
         .live-top {
           display: flex;
           align-items: center;

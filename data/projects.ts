@@ -10,6 +10,7 @@ export interface LiveProject {
   name: string;
   description: string;
   url: string;
+  image?: string;
   tags: string[];
   year: string;
 }
@@ -34,23 +35,25 @@ export const stats = [
 ];
 
 
-// TODO: ganti dengan project yang sudah live beneran — ini masih placeholder.
 export const liveProjects: LiveProject[] = [
   {
-    name: "Nama Project Satu",
-    description: "Ganti dengan deskripsi singkat project yang sudah live ini ngapain.",
-    url: "#",
-    tags: ["Next.js", "PostgreSQL"],
+    name: "Raka Aditya",
+    description: "Portofolio fotografer potret & jalanan asal Jakarta — dibuat oleh temanku.",
+    url: "https://ddporto.vercel.app",
+    image: "/live/ddporto.jpg",
+    tags: ["Next.js", "Photography"],
     year: "2026",
   },
   {
-    name: "Nama Project Dua",
-    description: "Ganti dengan deskripsi singkat project yang sudah live ini ngapain.",
-    url: "#",
-    tags: ["React Native"],
+    name: "Ahmad Dzakwan Ar-Rofif",
+    description: "Portofolio technical & architectural drafter, cost estimator, dan content creator.",
+    url: "https://portoahmadzakwan.netlify.app/",
+    image: "/live/ahmadzakwan.jpg",
+    tags: ["Portfolio", "Netlify"],
     year: "2025",
   },
   {
+    // TODO: ganti dengan project live berikutnya.
     name: "Nama Project Tiga",
     description: "Ganti dengan deskripsi singkat project yang sudah live ini ngapain.",
     url: "#",
