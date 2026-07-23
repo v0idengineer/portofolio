@@ -1,9 +1,24 @@
 "use client";
+import { useEffect, useState } from "react";
 import { siteConfig } from "@/data/projects";
 
 export default function Navbar() {
+  const [focusContact, setFocusContact] = useState(false);
+
+  useEffect(() => {
+    const target = document.getElementById("contact");
+    if (!target) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => setFocusContact(entry.isIntersecting),
+      { threshold: 0.35 }
+    );
+    io.observe(target);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={focusContact ? "navbar navbar-dim" : "navbar"}>
       <div className="logo">
         {siteConfig.initials.slice(0, -1)}
         <span>{siteConfig.initials.slice(-1)}</span>
@@ -30,6 +45,17 @@ export default function Navbar() {
           backdrop-filter: blur(12px);
           z-index: 100;
           gap: 1rem;
+          filter: blur(0) brightness(1);
+          opacity: 1;
+          transition: filter 0.5s ease, opacity 0.5s ease;
+        }
+        .navbar-dim {
+          filter: blur(3px) brightness(0.55);
+          opacity: 0.85;
+        }
+        .navbar-dim:hover {
+          filter: blur(0) brightness(1);
+          opacity: 1;
         }
         .logo {
           font-family: var(--font-display);
