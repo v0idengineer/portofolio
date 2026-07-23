@@ -38,7 +38,7 @@ export const stats = [
 export const liveProjects: LiveProject[] = [
   {
     name: "Raka Aditya",
-    description: "Portofolio fotografer potret & jalanan asal Jakarta — dibuat oleh temanku.",
+    description: "Portofolio fotografer potret & jalanan asal Jakarta.",
     url: "https://ddporto.vercel.app",
     image: "/live/ddporto.jpg",
     tags: ["Next.js", "Photography"],
