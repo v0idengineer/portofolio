@@ -2,23 +2,34 @@
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/data/projects";
 
+const SECTION_IDS = ["about", "live", "current", "work", "contact"];
+
 export default function Navbar() {
-  const [focusContact, setFocusContact] = useState(false);
+  const [dim, setDim] = useState(false);
 
   useEffect(() => {
-    const target = document.getElementById("contact");
-    if (!target) return;
+    const targets = SECTION_IDS.map((id) => document.getElementById(id)).filter(
+      (el): el is HTMLElement => el !== null
+    );
+    if (!targets.length) return;
 
+    const visible = new Set<Element>();
     const io = new IntersectionObserver(
-      ([entry]) => setFocusContact(entry.isIntersecting),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+        });
+        setDim(visible.size > 0);
+      },
       { threshold: 0.35 }
     );
-    io.observe(target);
+    targets.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
 
   return (
-    <nav className={focusContact ? "navbar navbar-dim" : "navbar"}>
+    <nav className={dim ? "navbar navbar-dim" : "navbar"}>
       <div className="logo">
         {siteConfig.initials.slice(0, -1)}
         <span>{siteConfig.initials.slice(-1)}</span>
