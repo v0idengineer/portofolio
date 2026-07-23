@@ -31,17 +31,11 @@ export default function IntroGate() {
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
           onClick={() => setOpen(false)}
         >
-          <span className="intro-eyebrow">// portofolio digital</span>
-          <h1 className="intro-title">
-            Sebelum masuk,<br />
-            <span className="outline">tarik napas dulu.</span>
-          </h1>
-          <p className="intro-sub">
-            Setiap detail di portofolio {siteConfig.name.split(" ")[0]} digarap sama niat — sama kayak semua project di dalamnya.
-          </p>
+          <span className="intro-eyebrow">// {siteConfig.tagline}</span>
+          <h1 className="intro-title">{siteConfig.name}</h1>
           <div className="intro-enter">
             <span className="intro-dot" />
-            klik di mana aja buat masuk
+            klik untuk masuk
           </div>
         </motion.div>
       )}

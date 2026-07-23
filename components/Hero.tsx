@@ -19,6 +19,20 @@ export default function Hero() {
       <div className="hero-deco2" />
 
       <div className="hero-top">
+        <div className="hero-visual-wrap">
+          <div className="hero-visual">
+            {hasPhoto ? (
+              <img src={PHOTO_SRC} alt={siteConfig.name} className="hero-photo" />
+            ) : (
+              <div className="hero-placeholder">
+                <span className="ph-initials">{siteConfig.initials}</span>
+              </div>
+            )}
+          </div>
+          <span className="frame-corner tl" />
+          <span className="frame-corner br" />
+        </div>
+
         <div className="hero-content">
           <p className="hero-eyebrow">
             {siteConfig.available ? "open to work /available for freelance" : "currently unavailable"}
@@ -41,20 +55,6 @@ export default function Hero() {
             <a href="#work" className="btn-primary">Lihat karya →</a>
             <a href="#contact" className="btn-ghost">Hubungi saya</a>
           </div>
-        </div>
-
-        <div className="hero-visual-wrap">
-          <div className="hero-visual">
-            {hasPhoto ? (
-              <img src={PHOTO_SRC} alt={siteConfig.name} className="hero-photo" />
-            ) : (
-              <div className="hero-placeholder">
-                <span className="ph-initials">{siteConfig.initials}</span>
-              </div>
-            )}
-          </div>
-          <span className="frame-corner tl" />
-          <span className="frame-corner br" />
         </div>
       </div>
 
@@ -95,14 +95,13 @@ export default function Hero() {
         }
         .hero-top {
           display: grid;
-          grid-template-columns: 1fr 260px;
+          grid-template-columns: 260px 1fr;
           gap: 3rem;
           align-items: center;
         }
         .hero-visual-wrap {
           position: relative;
           width: 260px;
-          justify-self: end;
         }
         .hero-visual {
           position: relative;

@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <OverlapPanel z={1} bg="var(--bg)" sticky overlap={false}>
+        <OverlapPanel z={1} bg="var(--bg)" first>
           <Hero />
         </OverlapPanel>
         <OverlapPanel z={2} bg="var(--bg2)">

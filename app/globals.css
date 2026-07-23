@@ -67,18 +67,7 @@ main {
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--text);
-  margin-bottom: 1.5rem;
-}
-.intro-title .outline {
-  -webkit-text-stroke: 1px var(--text);
-  color: transparent;
-}
-.intro-sub {
-  max-width: 420px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 .intro-enter {
   display: flex;
@@ -100,7 +89,4 @@ main {
 @keyframes gatePulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.25; }
-}
-@media (max-width: 480px) {
-  .intro-sub { font-size: 12px; }
 }
