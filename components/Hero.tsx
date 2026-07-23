@@ -95,12 +95,14 @@ export default function Hero() {
         }
         .hero-top {
           display: grid;
-          grid-template-columns: 1.2fr 1fr;
+          grid-template-columns: 1fr 260px;
           gap: 3rem;
           align-items: center;
         }
         .hero-visual-wrap {
           position: relative;
+          width: 260px;
+          justify-self: end;
         }
         .hero-visual {
           position: relative;
@@ -126,9 +128,9 @@ export default function Hero() {
         .ph-initials {
           font-family: var(--font-display);
           font-weight: 800;
-          font-size: clamp(3rem, 9vw, 4.5rem);
+          font-size: 2.5rem;
           letter-spacing: -0.02em;
-          color: rgba(255, 255, 255, 0.06);
+          color: rgba(255, 255, 255, 0.08);
         }
         .frame-corner {
           position: absolute;
@@ -270,8 +272,7 @@ export default function Hero() {
 
         @media (max-width: 768px) {
           .hero-top { grid-template-columns: 1fr; gap: 2rem; }
-          .hero-visual-wrap { max-width: 360px; }
-          .hero-visual { aspect-ratio: 16 / 10; }
+          .hero-visual-wrap { width: 180px; justify-self: start; }
         }
 
         @media (max-width: 480px) {
