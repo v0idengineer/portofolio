@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { siteConfig } from "@/data/projects";
+import SmoothScroll from "@/components/SmoothScroll";
+import IntroGate from "@/components/IntroGate";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
@@ -18,7 +20,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>
+          <IntroGate />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
